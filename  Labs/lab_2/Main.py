@@ -7,7 +7,6 @@ import Functions as Fn
 from sklearn import preprocessing
 server.include_df_index = True
 
-
 class Second_Lab(server.App):
     title = "NOAA data visualization"
 
@@ -100,13 +99,11 @@ class Second_Lab(server.App):
     def __get_html__(self, params):
         return params["range"]
 
-
     def __get_range__(self, rangeofdate):
         if len(rangeofdate.split('-')) == 1:
             return [int(rangeofdate) for _ in range(2)]
         else:
             return list(map(lambda x: int(x), rangeofdate.split('-')))
-
 
     def __get_data__(self, params):
         Data = Fn.upload_data(int(params['Region']))
@@ -114,7 +111,6 @@ class Second_Lab(server.App):
          Data['Week'].between(self.__get_range__(params['range_weeks'])[0], self.__get_range__(params['range_weeks'])[1])]
         return DataSet[['Year', 'Week', 'SMN', 'SMT', f'{params["NOAA"]}']]
     
-
     def __get_plot__(self, params):
         Data = self.__get_data__(params)
         Data = Fn.merge_indexes(params, Data)
@@ -144,8 +140,6 @@ class Second_Lab(server.App):
                 ax = sns.barplot(x=Data.index, y=Data[f'{params["NOAA"]}'])
                 plt.xticks(range(1, len(Data['SMN']), len(Data['SMN'])//13))
                 return ax
-
-
 
 app = Second_Lab()
 app.launch(port=9093)
