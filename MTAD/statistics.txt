@@ -1,0 +1,50 @@
+mean: carat       0.797633
+depth      61.749700
+table      57.456466
+price    3930.628810
+x           5.731478
+y           5.733307
+z           3.539448
+dtype: float64
+trimmed_mean: [7.86913699e-01 6.17458989e+01 5.74239158e+01 3.82227923e+03
+ 5.72030799e+00 5.72228198e+00 3.53254699e+00]
+median: carat       0.70
+depth      61.80
+table      57.00
+price    2401.00
+x           5.70
+y           5.71
+z           3.53
+dtype: float64
+variance: carat    2.244557e-01
+depth    2.016769e+00
+table    4.948705e+00
+price    1.589813e+07
+x        1.253013e+00
+y        1.234878e+00
+z        4.780789e-01
+dtype: float64
+std_deviation: carat       0.473768
+depth       1.420130
+table       2.224569
+price    3987.246342
+x           1.119381
+y           1.111250
+z           0.691433
+dtype: float64
+mean_deviation: carat       0.384474
+depth       1.025686
+table       1.769041
+price    3030.069586
+x           0.952694
+y           0.946309
+z           0.589918
+dtype: float64
+absolute_median_deviation: carat       0.32
+depth       0.70
+table       1.00
+price    1670.00
+x           0.92
+y           0.92
+z           0.57
+dtype: float64
